@@ -1,0 +1,25 @@
+public class ThreadPractice {
+
+    private static class Logan5 implements Runnable {
+        public void run() {
+            System.out.println("Hello from Logan5");
+            
+        }
+    }
+
+    private static class Jessica6 implements Runnable {
+        public void run() {
+            System.out.println("Hello from Jessica6");
+           
+        }
+    }
+
+    public static void runRunners() {
+        Thread t1 = new Thread(new Logan5());
+        Thread t2 = new Thread(new Jessica6());
+        t1.start();
+        t2.start();
+    }
+    public static void main(String[] args){
+        ThreadPractice dm = new ThreadPractice();
+        dm.runRunners();
